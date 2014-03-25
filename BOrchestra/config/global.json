@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "BasementOrchestra": {
+            "applicationId": "bi4t07b8s2mujQiQGi7Mf2WJOtSSVYtBbBlo1XST", 
+            "masterKey": "PXiTuavMYi2kpoyWi0aKe7odE7XQggSyVhtSj30R"
+        }, 
+        "_default": {
+            "link": "BasementOrchestra"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.17"
+    }
+}
