@@ -7,6 +7,8 @@ $(document).ready(function(){
 	   pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
 	   updateURL: true // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
 	});
+
+	
 	
 });
 

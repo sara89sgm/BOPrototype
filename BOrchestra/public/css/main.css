@@ -125,20 +125,21 @@ main {
 	width: 100%;
 }
 /* Slide 1 */
-#slide-1 .bcg {background-color:#FFFFFF}
+#home .bcg {background-color:#FFFFFF}
 
 /* Slide 2 */
-#slide-2 .bcg {background-color: #D3D3D3; text-align: center}
+#about .bcg {background-color: #D3D3D3; text-align: center}
 
 /* Slide 3 */
-#slide-3 .bcg {background-color: #A1A1A1; text-align: center}
+#gigs-pre .bcg {background-image:url('../img/bo2.jpg');background-color: #A1A1A1; text-align: center}
+#gigs .bcg {background-color: #A1A1A1; text-align: center}
 
 
-
-#slide-4 .bcg {background-color: #707070;}
+#blog-pre .bcg {background-image:url('../img/bo3.jpg');background-color: #707070; text-align: center}
+#blog .bcg {background-color: #707070;}
 
 /* Slide 5 */
-#slide-5 .bcg {background-color: #101010 }
+#contact .bcg {background-image:url('../img/bo.jpg'); background-color: #101010 }
 
 .hsContainer {
 	display: table;
@@ -150,8 +151,8 @@ main {
 }
 
 .hsContent {
-	max-width: 70%;
-	margin: -150px auto 0 auto;
+	max-width: 100%;
+	margin: 0 auto 0 auto;
 	display: table-cell;
 	vertical-align: middle;
 	color: #ebebeb;
@@ -179,12 +180,6 @@ main {
 		background-color: rgba(0,0,0,0.75);
 		padding: 3px 10px;
 	}
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
