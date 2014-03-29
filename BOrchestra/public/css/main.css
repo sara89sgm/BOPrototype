@@ -124,21 +124,22 @@ main {
 	height: 100%;
 	width: 100%;
 }
-/* Slide 1 */
+/* Home */
 #home .bcg {background-color:#FFFFFF}
 
-/* Slide 2 */
-#about .bcg {background-color: #D3D3D3; text-align: center}
+/* About */
+#about .bcg {background-color: #888888; text-align: center}
 
-/* Slide 3 */
+/* Gigs */
 #gigs-pre .bcg {background-image:url('../img/bo2.jpg');background-color: #A1A1A1; text-align: center}
-#gigs .bcg {background-color: #A1A1A1; text-align: center}
+#gigs .bcg {background-color: #555555; text-align: center}
 
+/* Blog */
 
-#blog-pre .bcg {background-image:url('../img/bo3.jpg');background-color: #707070; text-align: center}
-#blog .bcg {background-color: #707070;}
+#blog-pre .bcg {background-image:url('../img/bo3.jpg');background-color: rgba(16, 16, 16, 0.8); text-align: center}
+#blog .bcg {background-color: #222222;}
 
-/* Slide 5 */
+/* Contact */
 #contact .bcg {background-image:url('../img/bo.jpg'); background-color: #101010 }
 
 .hsContainer {
