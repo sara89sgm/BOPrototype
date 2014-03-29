@@ -17,21 +17,23 @@
 	<link rel="stylesheet" href="css/sections.css">
 	<script src="js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
-<body class="loading">
+<body class="loaded">
 	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=764827060209808";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=764827060209808";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+	<!-- AddThis Smart Layers END -->
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
             <![endif]-->
-
+<div id="skrollr-body">
             <header class="entry-header">
             	<div class="inner">
             		<nav class="back-link">
@@ -44,136 +46,112 @@
 
             <main>
 
+
             	<section id="slide-1" class="homeSlide">
             		<div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
             			<div class="hsContainer">
             				<div class="hsContent" 
             				data-center="opacity: 1" 
             				data-106-top="opacity: 0" data-anchor-target="#slide-1 .social">
-            					<div class="logo">
-            						<img src="img/logo.jpg">
-            					</div>
-            					<div class="social">
-            						<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
-            						<div><a href="https://twitter.com/Basement_London" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @Basement_London</a></div>
+            				<div class="logo">
+            					<img src="img/logo.jpg">
+            				</div>
+            				<div class="social">
+            					<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+            					<div><a href="https://twitter.com/Basement_London" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @Basement_London</a></div>
 
-            					</div>
             				</div>
             			</div>
             		</div>
-            	</section>
+            	</div>
+            </section>
 
-            	<section id="slide-2" class="homeSlide">
-            		<div class="bcg" 
-					data-center="background-position: 50% 0px;" 
-					data-top-bottom="background-position: 50% -100px;" 
-					data-bottom-top="background-position: 50% 100px;" 
-					data-anchor-target="#slide-2"
-					>
-			    	<div class="hsContainer">
-						<div class="hsContent" 
-							data-bottom-top="opacity: 0" 
-							data-50p-top="opacity: 0" 
-							data-center="opacity: 1" 
-							data--30p-bottom="opacity: 0"  
-							data-anchor-target="#slide-2"
-						>
-							<h2> About </h2>
-				    		<p>Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.</p>
+            <section id="slide-2" class="homeSlide">
+            	<div class="bcg">
+            		<div class="hsContainer">
+            			<div class="hsContent" 
+            			data-bottom-top="opacity: 0" 
+            			data-80p-top="opacity: 0" 
+            			data-center="opacity: 1" 
+            			data--40p-bottom="opacity: 0"  
+            			data-anchor-target="#slide-2">
+	            			<h2> About </h2>
+	            			<p>Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.</p>
+	            			<p>Blog coming soon. Keep your eyes open.</p>
+	            			<p>Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.</p>
+	            			<p>Blog coming soon. Keep your eyes open.</p>
+            			</div>
+            		</div>
+            	</div>
+        </section>
+    <section id="slide-3" class="homeSlide">
+    	<div class="bcg" 
+    
+    	data-anchor-target="#slide-3"
+    	>
+    	<div class="hsContainer">
+    		<div class="hsContent" 
+    		data-bottom-top="opacity: 0" 
+    		data-25p-top="opacity: 0" 
+    		data-top="opacity: 1"  
+    		data-anchor-target="#slide-3"
+    		>
+    		<h2>and share mine.</h2>
+    	</div>
+    </div>
 
+</div>
+</section>
 
-							<p>Blog coming soon. Keep your eyes open.</p>
-			    		</div>
-			    	</div>
-			    	
-			    </div>
-            	</section>
-            	<section id="slide-3" class="homeSlide">
-            		<div class="bcg" 
-					data-center="background-position: 50% 0px;" 
-					data-top-bottom="background-position: 50% -100px;" 
-					data-bottom-top="background-position: 50% 100px;" 
-					data-anchor-target="#slide-3"
-				>
-			    	<div class="hsContainer">
-						<div class="hsContent" 
-							data-bottom-top="opacity: 0" 
-							data-25p-top="opacity: 0" 
-							data-top="opacity: 1"  
-							data-anchor-target="#slide-3"
-						>
-				    		<h2>and share mine.</h2>
-			    		</div>
-			    	</div>
-			    	
-			    </div>
-            	</section>
+<section id="slide-4" class="homeSlide">
+	<div class="bcg" 
 
-            	<section id="slide-4" class="homeSlide">
-            		<div class="bcg" 
-					data-center="background-position: 50% 0px;" 
-					data-top-bottom="background-position: 50% -100px;" 
-					data-bottom-top="background-position: 50% 100px;" 
-					data-anchor-target="#slide-4"
-				>
-			    	<div class="hsContainer">
-						<div class="hsContent" 
-							data-bottom-top="opacity: 0" 
-							data-25p-top="opacity: 0" 
-							data-top="opacity: 1"  
-							data-anchor-target="#slide-4"
-						>
-				    		<h2>and share mine.</h2>
-			    		</div>
-			    	</div>
-			    	
-			    </div>
-            	</section>
+	data-anchor-target="#slide-4"
+	>
+	<div class="hsContainer">
+		<div class="hsContent" 
+		data-bottom-top="opacity: 0" 
+		data-25p-top="opacity: 0" 
+		data-top="opacity: 1"  
+		data-anchor-target="#slide-4"
+		>
+		<h2>and share mine.</h2>
+	</div>
+</div>
+
+</div>
+</section>
 
 
-            	<section id="slide-5" class="homeSlide">
-            		<div class="bcg" 
-					data-center="background-position: 50% 0px;" 
-					data-top-bottom="background-position: 50% -100px;" 
-					data-bottom-top="background-position: 50% 100px;" 
-					data-anchor-target="#slide-4"
-				>
-			    	<div class="hsContainer">
-						<div class="hsContent" 
-							data-bottom-top="opacity: 0" 
-							data-25p-top="opacity: 0" 
-							data-top="opacity: 1"  
-							data-anchor-target="#slide-5"
-						>
-				    		<h2>THE END</h2>
-			    		</div>
-			    	</div>
-			    	
-			    </div>
-            	</section>
+<section id="slide-5" class="homeSlide">
+	<div class="bcg" 
 
-            </main>
+	data-anchor-target="#slide-4"
+	>
+	<div class="hsContainer">
+		<div class="hsContent" 
+		data-bottom-top="opacity: 0" 
+		data-25p-top="opacity: 0" 
+		data-top="opacity: 1"  
+		data-anchor-target="#slide-5"
+		>
+		<h2>THE END</h2>
+	</div>
+</div>
 
-            <script src="js/vendor/jquery-2.1.0.js"></script>
-            <script src="js/vendor/imagesloaded.js"></script>
-            <script src="js/vendor/skrollr.js"></script>
-            <script src="js/init.js"></script>
+</div>
+</section>
 
-            <!-- AddThis Smart Layers BEGIN -->
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533626e81c729cbd"></script>
-<script type="text/javascript">
-  addthis.layers({
-    'theme' : 'transparent', 
-    'follow' : {
-      'services' : [
-        {'service': 'facebook', 'id': 'pages/Basement-Orchestra/343375519019018'},
-        {'service': 'twitter', 'id': 'Basement_London'}
-      ]
-    }   
-  });
-</script>
-<!-- AddThis Smart Layers END -->
+</main>
 
-        </body>
-        </html>
+</div>
+
+<script src="js/vendor/jquery-2.1.0.js"></script>
+<script src="js/vendor/imagesloaded.js"></script>
+<script src="js/vendor/skrollr.js"></script>
+<script src="js/init.js"></script>
+
+
+
+</body>
+</html>

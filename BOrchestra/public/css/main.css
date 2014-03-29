@@ -102,7 +102,7 @@ h2 {
 	background: url('../img/ico_loading.gif') no-repeat center center;
 }
 section {
-	min-width: 960px;
+	min-width: 95%;
 	opacity: 0;
 }
 .loaded section,
@@ -167,7 +167,7 @@ main {
 	}
 	.hsContent p {
         font-size: 1rem;
-		width: 400px;
+		width: 90%;
 		margin: 0 auto;
 		color: #000000;
 	}
