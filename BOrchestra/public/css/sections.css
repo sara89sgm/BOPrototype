@@ -1,0 +1,25 @@
+
+.logo{
+	width: 70%;
+	margin: auto;
+}
+
+.logo img{
+	width: 100%;
+	height: auto;
+}
+
+.social{
+	width: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+.social div{
+
+	display: inline;
+}
+
+.twitter-follow-button{
+	padding-top: 5px;
+}
