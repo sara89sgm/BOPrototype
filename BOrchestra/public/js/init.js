@@ -42,7 +42,7 @@
 	var nav = $("#nav");
 	
 	var top_spacing = 0;
-	var waypoint_offset = 30;
+	var waypoint_offset =0;
 
 	nav_container.waypoint({
 		handler: function(event, direction) {
@@ -55,6 +55,8 @@
 			} else {
 				nav_container.css({ 'top':'', 'height':'' });
 				nav_container.stop().removeClass("sticky").css({'position':'absolute', "bottom":nav.outerHeight()+waypoint_offset}).animate({"bottom":"20"});
+				var active_link = $('nav a[href="#home"]');
+	active_link.addClass("selected");
 			}
 			
 		},
@@ -71,15 +73,18 @@
 		
 			var active_section;
 			active_section = $(this);
+			console.log(active_section.attr("id"));
 			if (direction === "up") active_section = active_section.prev();
 
 			var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
 			navigation_links.removeClass("selected");
 			active_link.addClass("selected");
 
-		},
-		offset: '15%'
+		}
 	});
+
+	var active_link = $('nav a[href="#home"]');
+	active_link.addClass("selected");
 
 
 //The options (second parameter) are all optional. The values shown are the default values.
