@@ -127,6 +127,8 @@ main {
 /* Home */
 #home .bcg {background-color:#FFFFFF}
 
+#home-after .bcg {background-image:url('../img/bo.jpg'); background-color: #101010 }
+
 /* About */
 #about .bcg {background-color: #888888; text-align: center}
 
