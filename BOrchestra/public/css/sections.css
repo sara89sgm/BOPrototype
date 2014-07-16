@@ -23,3 +23,17 @@
 .twitter-follow-button{
 	padding-top: 5px;
 }
+
+#owl-example .item img{
+    display: block;
+    width: 50%;
+    float: right;
+    height: 70%;
+}
+#owl-example .item .content{
+    display: block;
+    width: 50%;
+    float: left;
+    height: auto;
+    overflow: scroll;
+}

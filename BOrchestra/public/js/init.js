@@ -1,4 +1,4 @@
-( function( $ ) {
+$(document).ready(function() {
 	
 	// Setup variables
 	$window = $(window);
@@ -14,8 +14,8 @@
 		// Init Skrollr
 		var s = skrollr.init({
 			forceHeight: false, 
-		    render: function(data) {
-		    
+			render: function(data) {
+
 		        //Debugging - Log the current scroll position.
 		        //console.log(data.curTop);
 		    }
@@ -23,12 +23,12 @@
 		});
 		
 		// Get window size
-	    winH = $window.height();
-	    
+		winH = $window.height();
+
 	    // Keep minimum height 550
 	    if(winH <= 550) {
-			winH = 550;
-		} 
+	    	winH = 550;
+	    } 
 	    
 	    // Resize our slides
 	    $slide.height(winH);
@@ -39,52 +39,52 @@
 	    s.refresh($('.homeSlide'));
 
 	    var nav_container = $(".header-container");
-	var nav = $("#nav");
-	
-	var top_spacing = 0;
-	var waypoint_offset =0;
+	    var nav = $("#nav");
+
+	    var top_spacing = 0;
+	    var waypoint_offset =0;
 
 	// nav_container.waypoint({
 	// 	handler: function(event, direction) {
-			
+
 	// 		if (direction == 'down') {
-			
+
 	// 			nav_container.css({ 'height':nav.outerHeight(), 'position':'', 'bottom':''  });
 	// 			nav_container.stop().addClass("sticky").css("top",-nav.outerHeight()).animate({"top":top_spacing});
-				
+
 	// 		} else {
 	// 			nav_container.css({ 'top':'', 'height':'' });
 	// 			nav_container.stop().removeClass("sticky").css({'position':'absolute', "bottom":nav.outerHeight()+waypoint_offset}).animate({"bottom":"20"});
 	// 			var active_link = $('nav a[href="#home"]');
 	// active_link.addClass("selected");
 	// 		}
-			
+
 	// 	},
 	// 	offset: function() {
 	// 		return -nav.outerHeight()-waypoint_offset;
 	// 	}
 	// });
-	
-	var sections = $("section");
-	var navigation_links = $("#nav ul li a");
-	
-	sections.waypoint({
-		handler: function(event, direction) {
+
+var sections = $("section");
+var navigation_links = $("#nav ul li a");
+
+sections.waypoint({
+	handler: function(event, direction) {
 		
-			var active_section;
-			active_section = $(this);
-			console.log(active_section.attr("id"));
-			if (direction === "up") active_section = active_section.prev();
+		var active_section;
+		active_section = $(this);
+		console.log(active_section.attr("id"));
+		if (direction === "up") active_section = active_section.prev();
 
-			var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
-			navigation_links.removeClass("selected");
-			active_link.addClass("selected");
+		var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
+		navigation_links.removeClass("selected");
+		active_link.addClass("selected");
 
-		}
-	});
+	}
+});
 
-	var active_link = $('nav a[href="#home"]');
-	active_link.addClass("selected");
+var active_link = $('nav a[href="#home"]');
+active_link.addClass("selected");
 
 
 //The options (second parameter) are all optional. The values shown are the default values.
@@ -107,8 +107,19 @@ skrollr.menu.init(s, {
         //return Math.abs(currentTop - targetTop) * 10;
     }
 
-  
+
 });
 }
-		
-} )( jQuery );
+
+$("#owl-example").owlCarousel({
+ 
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 400,
+      pagination : false,
+      singleItem:true,
+      navigationText: ["<",">"],
+      responsive: true
+     });
+ 
+ 
+  });
