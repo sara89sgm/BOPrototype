@@ -2,7 +2,7 @@ extends ../layouts/default
 
 block intro
 	.container
-		h1 Gallery
+		h1 Gigs
 	
 block content
 	.container
@@ -11,7 +11,8 @@ block content
 				h2= gallery.name
 					if gallery.publishedDate
 						.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
-				
+				if gallery.description
+					p.gallery-description = gallery.description
 				.row.gallery-images
 					if gallery.heroImage.exists
 						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
@@ -22,4 +23,4 @@ block content
 						each image in gallery.images
 							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
 		else
-			h3.text-muted There are no image galleries yet.
+			h3.text-muted There are no gigs yet.

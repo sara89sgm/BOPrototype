@@ -24,9 +24,15 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '6a=C.aseu8No([@p.#e+.Irha)7hXBXnSSP%vMw?JXZpeRFRtb;V]:.Ff,G)g^%_'
+	'cookie secret': '6a=C.aseu8No([@p.#e+.Irha)7hXBXnSSP%vMw?JXZpeRFRtb;V]:.Ff,G)g^%_',
+
+	'cloudinary config': 'cloudinary://776568377152651:GcWmyjwGWxOcfE1h0Zv76xQQW3g@dz7qqbrlc',
+	'cloudinary prefix': 'keystone' 
 
 });
+
+keystone.set();
+
 
 // Load your project's Models
 
@@ -47,6 +53,8 @@ keystone.set('locals', {
 
 keystone.set('routes', require('./routes'));
 
+
+
 // Setup common locals for your emails. The following are required by Keystone's
 // default email templates, you may remove them if you're using your own.
 
@@ -54,7 +62,7 @@ keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
-	'galleries': 'galleries',
+	'gigs': 'galleries',
 	'users': 'users'
 });
 
