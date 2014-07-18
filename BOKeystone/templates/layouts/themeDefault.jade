@@ -34,9 +34,16 @@ html
 	body
 
 		//- HEADER
-		#header: .container
-		//ADD HEADER
-
+		#header
+			.header-container.sticky
+				#heading.wrapper.clearfix
+					nav#nav
+						ul#menu
+							li
+								a(href='#home') Home
+								a(href='#about') About
+								a(href='#gigs') Gigs
+								a(href='#contact') Contact
 		//- BODY
 		#body
 
@@ -44,19 +51,12 @@ html
 			block content
 
 
-		//- FOOTER
-		.container: #footer
-
-			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
-
-
 		//- JAVASCRIPT
-
-
+		
+		script(src='/js/lib/jquery/jquery-2.1.1.min.js')
 		script(src='/js/lib/bootstrap/bootstrap-3.2.0.min.js')
 
 		if user && user.canAccessKeystone
 			script(src='/keystone/js/content/editor.js')
-
 		block js
+		

@@ -1,40 +1,82 @@
 extends ../layouts/themeDefault
 
+
 block content
 	.container.loaded
-		div#fb-root
-			script
-			(function(d, s, id) {
-			   var js, fjs = d.getElementsByTagName(s)[0];
-			   if (d.getElementById(id)) {return;}
-			   js = d.createElement(s); js.id = id;
-			   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=101562769948573";
-			   fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-
-			div.fb-like(data-href="http://foodjing.com/" data-send="true" data-width="450" data-show-faces="true")
-			
 		#skrollr-body
 			main
 				section#home.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#home")
-            			.hsContainer
-            				.hsContent(data-center="opacity: 1" data-50-top="opacity: 0" data-anchor-target="#home .social") 
-            					.logo
-            						img (src="img/logo.png")
+						.hsContainer
+							.hsContent(data-center="opacity: 1" data-50-top="opacity: 0" data-anchor-target="#home .social")
+								.logo
+									img(src="/images/logo.png")
+								.social
 
-            	 section#home-after.homeSlide
-                    .bcg (data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% 0px;" data-anchor-target="#home")
-                        .hsContainer
-                        	.hsContent
-                          
+				section#home-after.homeSlide
+					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% 0px;" data-anchor-target="#home")
+						.hsContainer
+							.hsContent
+
+				section#about.homeSlide
+					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;")
+						.hsContainer
+							.hsContent(data-bottom-top="opacity: 0" data-80p-top="opacity: 0" data-center="opacity: 1" data--40p-bottom="opacity: 0" data-anchor-target="#about")
+								h2
+									About
+								p 
+									Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.
+								p
+									Blog coming soon. Keep your eyes open.
+
+				section#gigs-pre.homeSlide
+					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;" data-anchor-target="#gigs-pre")
+						.hsContainer
+							.hsContent(data-bottom-top="opacity: 0" data-25p-top="opacity: 0" data-top="opacity: 1" data-anchor-target="#gigs-pre")
+
+				section#gigs.homeSlide
+					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;" data-anchor-target="#gigs")
+						.hsContainer
+							.hsContent(data-bottom-top="opacity: 0" data-25p-top="opacity: 0" data-top="opacity: 1" data-anchor-target="#gigs")
+								h2 Gigs &amp; Festivals
+									if galleries.length
+										#owl-example.owl-carousel
+											each gallery in galleries
+												.item
+													.content
+														h2= gallery.name
+															if gallery.publishedDate
+																.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
+														if gallery.description
+															p.gallery-description = gallery.description
+														.row.gallery-images
+														if (gallery.images[0] == undefined)
+															img(src="/images/bo.jpg")
+														else
+															img(src=gallery.images[0])
+									else
+										h3.text-muted There was a problem getting the gigs info try a[href='/gigs'] here
+					
+				section#contact.homeSlide
+					.bcg(data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#contact")
+						.hsContainer
+							.hsContent(data-bottom-top="opacity: 0" data-25p-top="opacity: 0" data-top="opacity: 1" data-anchor-target="#contact")
+								h2.bgBlack Contact
+									p 
+										Send us an email to basementOrchestra@gggg.coming
+									p 
+										Or check us in Twitter or Facebook
+
 block js
-	script(src='js/vendor/jquery-2.1.0.js')
-	script(src='js/vendor/owl.carousel.js')
-	script(src='js/vendor/skrollr.js')
-	script(src='js/vendor/skrollr.menu.js')
-	script(src='js/vendor/waypoints.min.js')
-	script(src='js/init.js')
+
+	script(src='/js/lib/waypoints/modernizr-2.7.1.min.js')
+	script(src='/js/lib/owl/owl.carousel.min.js')
+	script(src='/js/lib/skrollr/skrollr.js')
+	script(src='/js/lib/skrollr/skrollr.menu.js')
+	script(src='/js/lib/waypoints/waypoints.min.js')
+	script(src='/js/lib/waypoints/imagesloaded.js')
+	script(src='/js/lib/nav/jquery.slicknav.min.js')
+	script(src='/js/init.js')
 
     
  

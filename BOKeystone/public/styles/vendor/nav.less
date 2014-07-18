@@ -17,9 +17,22 @@
 }
 
 
-/* ==============
-    MOBILE: Menu
-   ============== */
+.slicknav_menu {
+    display:none;
+}
+
+@media screen and (max-width: 40em) {
+    .header-container {
+        display:none;
+    }
+    
+    .js .slicknav_menu {
+        display:block;
+
+    }
+}
+
+
 
 nav {
     z-index: 42;
@@ -63,7 +76,6 @@ nav ul li a:focus {outline:none;}
 nav ul li a::-moz-focus-inner {border:0;}
 
 
-
 /* ==========================================================================
    Brad's custom styles
    ========================================================================== */
@@ -73,7 +85,9 @@ nav ul li a::-moz-focus-inner {border:0;}
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 40em) {
+
+
 
 /* ====================
     INTERMEDIATE: Menu

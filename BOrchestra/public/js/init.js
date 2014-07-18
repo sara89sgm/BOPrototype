@@ -112,14 +112,14 @@ skrollr.menu.init(s, {
 }
 
 $("#owl-example").owlCarousel({
- 
+	
       navigation : true, // Show next and prev buttons
       slideSpeed : 400,
       pagination : false,
       singleItem:true,
       navigationText: ["<",">"],
       responsive: true
-     });
- 
- 
   });
+
+
+});
