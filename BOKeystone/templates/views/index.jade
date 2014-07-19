@@ -1,5 +1,8 @@
 extends ../layouts/themeDefault
 
+block header
+	include ../mixins/navHome
+
 
 block content
 	.container.loaded
@@ -22,12 +25,9 @@ block content
 					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;")
 						.hsContainer
 							.hsContent(data-bottom-top="opacity: 0" data-80p-top="opacity: 0" data-center="opacity: 1" data--40p-bottom="opacity: 0" data-anchor-target="#about")
-								h2
-									About
-								p 
-									Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.
-								p
-									Blog coming soon. Keep your eyes open.
+								h2 About
+								p Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.
+								p Blog coming soon. Keep your eyes open.
 
 				section#gigs-pre.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;" data-anchor-target="#gigs-pre")
@@ -37,30 +37,28 @@ block content
 				section#gigs.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;" data-anchor-target="#gigs")
 						.hsContainer
-							.hsContent(data-bottom-top="opacity: 0" data-25p-top="opacity: 0" data-top="opacity: 1" data-anchor-target="#gigs")
-								h2 Gigs &amp; Festivals
-									if galleries.length
-										#owl-example.owl-carousel
-											each gallery in galleries
-												.item
-													.content
-														h2= gallery.name
-															if gallery.publishedDate
-																.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
-														if gallery.description
-															p.gallery-description = gallery.description
-														.row.gallery-images
-														if (gallery.images[0] == undefined)
-															img(src="/images/bo.jpg")
-														else
-															img(src=gallery.images[0])
+							.hsContent(data-bottom-top="opacity: 1" data-25p-top="opacity: 1" data-top="opacity: 1" data-anchor-target="#gigs")
+								h2 Gigs 
+								#owl-bo.owl-carousel
+									if gigs.length
+										each gig in gigs
+											.item
+												.content
+													.box
+														if gig.publishedDate
+															h3 #{gig.name} ( #{gig._.publishedDate.format('Do MMM YYYY')} )
+															if gig.description
+																.gig-description!= gig.description
+												if (gig.images[0] == undefined)
+													img(src="/images/bo.jpg" width="300" height="auto").img-rounded
+												else
+													img(src=gig.images[0].url width="300" height="auto").img-rounded
 									else
 										h3.text-muted There was a problem getting the gigs info try a[href='/gigs'] here
-					
 				section#contact.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#contact")
 						.hsContainer
-							.hsContent(data-bottom-top="opacity: 0" data-25p-top="opacity: 0" data-top="opacity: 1" data-anchor-target="#contact")
+							.hsContent(data-bottom-top="opacity: 0.5" data-top="opacity: 1" data-anchor-target="#contact")
 								h2.bgBlack Contact
 									p 
 										Send us an email to basementOrchestra@gggg.coming
@@ -76,6 +74,7 @@ block js
 	script(src='/js/lib/waypoints/waypoints.min.js')
 	script(src='/js/lib/waypoints/imagesloaded.js')
 	script(src='/js/lib/nav/jquery.slicknav.min.js')
+	script(src='/js/lib/owl/owl.carousel.min.js')
 	script(src='/js/init.js')
 
     

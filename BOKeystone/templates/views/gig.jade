@@ -1,0 +1,34 @@
+extends ../layouts/themeDefault
+
+block header
+	include ../mixins/navTheme
+
+block intro
+	.container
+		h1 Gigs
+	
+block content
+	.container
+		if gigs.length
+			each gig in gigs
+				h2=gig.name
+					if gig.publishedDate
+						.pull-right.text-muted= gig._.publishedDate.format('Do MMM YYYY')
+				if gig.description
+					p.gig-description!=gig.description
+				.row.gallery-images
+					if gig.heroImage.exists
+						.col-sm-4.col-md-4.gallery-image: img(src=gig._.heroImage.limit(680,680)).img-rounded
+						.col-sm-8.col-md-8: .row
+							each image in gig.images
+								.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+					else
+						each image in gig.images
+							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+		else
+			h3.text-muted There are no gigs yet.
+
+block js
+
+	script(src='/js/lib/nav/jquery.slicknav.min.js')
+	script(src='/js/initTheme.js')

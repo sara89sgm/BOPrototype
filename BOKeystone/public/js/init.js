@@ -47,9 +47,7 @@ $(document).ready(function() {
 
 		    		var active_section;
 		    		active_section = $(this);
-		    		console.log(active_section.attr("id"));
 		    		if (direction === "up") active_section = active_section.prev();
-
 		    		var active_link = $('nav a[href="#' + active_section.attr("id") + '"]');
 		    		navigation_links.removeClass("selected");
 		    		active_link.addClass("selected");
@@ -74,13 +72,13 @@ $(document).ready(function() {
 		label:'',
 		closeOnClick : true
 	});
-	$("#owl-example").owlCarousel({
+	$("#owl-bo").owlCarousel({
 
 		navigation : true, // Show next and prev buttons
 		slideSpeed : 400,
 		pagination : false,
 		singleItem:true,
-		navigationText: ["<",">"],
+		navigationText: ["Pre","Next"],
 		responsive: true
 	});
 

@@ -25,13 +25,11 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': '6a=C.aseu8No([@p.#e+.Irha)7hXBXnSSP%vMw?JXZpeRFRtb;V]:.Ff,G)g^%_',
-
-	'cloudinary config': 'cloudinary://776568377152651:GcWmyjwGWxOcfE1h0Zv76xQQW3g@dz7qqbrlc',
-	'cloudinary prefix': 'keystone' 
-
 });
 
 keystone.set();
+
+keystone.set('cloudinary config', { cloud_name: 'dz7qqbrlc', api_key: '776568377152651', api_secret: 'GcWmyjwGWxOcfE1h0Zv76xQQW3g' });
 
 
 // Load your project's Models
@@ -62,7 +60,7 @@ keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
-	'gigs': 'galleries',
+	'gigs': 'gigs',
 	'users': 'users'
 });
 

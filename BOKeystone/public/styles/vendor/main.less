@@ -97,6 +97,7 @@ body {
 }
 h2 {
 	margin-top: 0;
+    margin-bottom: 3em;
 }
 .loading {
 	background: url('../../images/ico_loading.gif') no-repeat center center;
@@ -130,11 +131,11 @@ main {
 #home-after .bcg {background-image:url('../../images/bo3.jpg'); background-color: #101010 }
 
 /* About */
-#about .bcg {background-color: #888888; text-align: center}
+#about .bcg {background-color: #555555; text-align: center}
 
 /* Gigs */
 #gigs-pre .bcg {background-image:url('../../images/bo2.jpg');background-color: #A1A1A1; text-align: center}
-#gigs .bcg {background-color: #555555; text-align: center}
+#gigs .bcg {background-color: #222222;; text-align: center}
 
 /* Blog */
 
@@ -231,10 +232,6 @@ main {
     width: 1px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -246,25 +243,10 @@ main {
     width: auto;
 }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
 .invisible {
     visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 
 .clearfix:before,
 .clearfix:after {
@@ -285,22 +267,7 @@ main {
     *zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
 /* ==========================================================================
    Print styles.
@@ -373,37 +340,3 @@ main {
         page-break-after: avoid;
     }
 }
-/* HEADER */
-
-.back-link a {
-	color: #4ca340;
-	text-decoration: none; 
-	border-bottom: 1px #4ca340 solid;
-}
-.back-link a:hover,
-.back-link a:focus {
-	color: #408536; 
-	text-decoration: none;
-	border-bottom: 1px #408536 solid;
-}
-h1 {
-	height: 100%;
-	/* The html and body elements cannot have any padding or margin. */
-	margin: 0;
-	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
-	color: #1c1d1e;
-	font-size: 32px;
-	margin-bottom: 3px;
-}
-h2 {
-	color: #1c1d1e;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: normal;
-}
-.entry-header .inner {
-	text-align: left;
-	margin: 0 auto 20px auto;
-	width: 800px;
-}
-.entry-header { padding-top: 20px; background-color: #fff; width:100%; position: fixed; top: 0; left: 0; z-index: 999999}
