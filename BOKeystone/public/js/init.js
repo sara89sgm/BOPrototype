@@ -78,7 +78,7 @@ $(document).ready(function() {
 		slideSpeed : 400,
 		pagination : false,
 		singleItem:true,
-		navigationText: ["<",">"],
+		navigationText: ["<img src='images/prenote.png' width='20px' height='auto'>","<img src='images/nextnote.png' width='20px' height='auto'>"],
 		responsive: true
 	});
 
