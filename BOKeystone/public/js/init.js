@@ -78,7 +78,7 @@ $(document).ready(function() {
 		slideSpeed : 400,
 		pagination : false,
 		singleItem:true,
-		navigationText: ["Pre","Next"],
+		navigationText: ["<",">"],
 		responsive: true
 	});
 

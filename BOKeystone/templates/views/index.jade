@@ -15,6 +15,16 @@ block content
 								.logo
 									img(src="/images/logo.png")
 								.social
+										ul
+											li
+												a(href='https://twitter.com/Basement_London') 
+													img(src="/images/twitter.png" width="64" height="auto")
+											li
+												a(href='https://www.facebook.com/pages/Basement-Orchestra/343375519019018') 
+													img(src="/images/facebook.png" width="64" height="auto")
+					.arrow(data-center="opacity: 1" data-50-top="opacity: 0" data-anchor-target="#home .social")
+						img(src="/images/note1.png")
+		
 
 				section#home-after.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% 0px;" data-anchor-target="#home")
@@ -24,7 +34,7 @@ block content
 				section#about.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-bottom-top="background-position: 50% 100px;")
 						.hsContainer
-							.hsContent(data-bottom-top="opacity: 0" data-80p-top="opacity: 0" data-center="opacity: 1" data--40p-bottom="opacity: 0" data-anchor-target="#about")
+							.hsContent(data-bottom-top="opacity: 0.3" data-80p-top="opacity: 0.3" data-center="opacity: 1" data--40p-bottom="opacity: 0" data-anchor-target="#about")
 								h2 About
 								p Basement Orchestra is a new ensemble based in London for orchestral musicians looking to play in a challenging and interesting environment. Click play to get involved.
 								p Blog coming soon. Keep your eyes open.
@@ -43,28 +53,39 @@ block content
 									if gigs.length
 										each gig in gigs
 											.item
-												.content
-													.box
-														if gig.publishedDate
-															h3 #{gig.name} ( #{gig._.publishedDate.format('Do MMM YYYY')} )
-															if gig.description
-																.gig-description!= gig.description
 												if (gig.images[0] == undefined)
-													img(src="/images/bo.jpg" width="300" height="auto").img-rounded
+													.content(style="background-image: url(/images/bo.jpg)")
+														.box
+															if gig.publishedDate
+																h3 #{gig.name} ( #{gig._.publishedDate.format('Do MMM YYYY')} )
+																if gig.description
+																	.gig-description!= gig.description
 												else
-													img(src=gig.images[0].url width="300" height="auto").img-rounded
+													.content(style="background-image: url(#{gig.images[0].url})")
+														.box
+															if gig.publishedDate
+																h3 #{gig.name} ( #{gig._.publishedDate.format('Do MMM YYYY')} )
+																if gig.description
+																	.gig-description!= gig.description
+												
 									else
 										h3.text-muted There was a problem getting the gigs info try a[href='/gigs'] here
 				section#contact.homeSlide
 					.bcg(data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#contact")
 						.hsContainer
 							.hsContent(data-bottom-top="opacity: 0.5" data-top="opacity: 1" data-anchor-target="#contact")
-								h2.bgBlack Contact
+								div.bgBlack
+									h2 Play with us!
 									p 
-										Send us an email to basementOrchestra@gggg.coming
-									p 
-										Or check us in Twitter or Facebook
-
+										| We need you. Be brave and make the first move. We will get back to you - soon. 
+										| <a href="mailto:firebird@basementorchestra.com"> Email </a>
+										| us with your name, instrument and T-shirt size to get involved.
+									p
+										| You can also find a little more about us in 
+										| <a href="https://twitter.com/Basement_London"> Twitter </a>
+										| or 
+										| <a href="https://www.facebook.com/pages/Basement-Orchestra/343375519019018"> Facebook </a>
+	
 block js
 
 	script(src='/js/lib/waypoints/modernizr-2.7.1.min.js')
